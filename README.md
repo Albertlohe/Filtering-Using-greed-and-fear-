@@ -1,11 +1,14 @@
 Introduction
+
 Warren Buffett once said, “A simple rule dictates my buying: Be fearful when others are greedy, and be greedy when others are fearful”. In this research, we test Buffett’s advice by applying a Markov switching regression model to the new Fear and Greed Index dataset to detect if the current regime of the US Equity market is rife with fear. The results show that limiting long-biased trades to periods of time where the market is fearful tends to increase the net profit of those trades.
 
 Background
 
+
 A trade filter is a condition that dictates whether or not a strategy can open new positions. A popular example of this may be prohibiting trades during periods of high VIX, or only entering long positions with the S&P500 is above its 200-day moving average. While scanning for trades, a filter prohibits long positions during bearish regimes and prohibits short positions during bullish regimes to improve the probability of successful trades.
 Introducing the Fear and Greed Index
 To emulate Buffett’s process of being greedy when others are fearful, we can use the new Fear and Greed Index to construct a trade filter. This dataset is an index that represents the degree of fear and greed in the US Equity market. The index is composed of the following indicators:
+
 1.	Market momentum: The difference between the S&P 500 price and its 125-day SMA.
 2.	Stock price strength: The difference between the number of stocks trading at 52-week highs and the number of stocks trading at 52-week lows, divided by the number of stocks in the market.
 3.	Stock price breadth: The McClellan Volume Summation Index of liquid stocks on the NYSE.
