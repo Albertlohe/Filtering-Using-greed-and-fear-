@@ -10,3 +10,10 @@
 2.	self._index.history = self.history(self._index.symbol, datetime(2014, 7, 1), self.time).loc[self._index.symbol].qcindex
 3.	self._index.regime = None
 
+
+
+
+here we add the SPY to trade and remove fees.
+1.	self._equity = self.add_equity('SPY')
+2.	self._equity.set_fee_model(ConstantFeeModel(0))
+
